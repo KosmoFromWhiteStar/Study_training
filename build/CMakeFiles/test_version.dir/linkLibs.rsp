@@ -1,0 +1,1 @@
+ "D:/Boost/boost-1.86.0/boost_lib/lib/libboost_unit_test_framework-mgw13-mt-d-x64-1_86.a" libhelloworld.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
