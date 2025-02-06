@@ -3,7 +3,7 @@ set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
 project(helloworld VERSION ${PROJECT_VESRION})
-SET(BOOST_ROOT "D:/Boost/boost-1.86.0")
+#SET(BOOST_ROOT "D:/Boost/boost-1.86.0")
 
 set(Boost_USE_STATIC_LIBS       ON)  # only find static libs
 set(Boost_USE_DEBUG_LIBS        ON)  # ignore debug libs and
