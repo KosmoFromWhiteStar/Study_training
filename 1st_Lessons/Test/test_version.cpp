@@ -1,8 +1,10 @@
 #define BOOST_TEST_MODULE test_version
 
-#include "../Incl/lib.h"
 
 #include <boost/test/unit_test.hpp>
+
+
+#include "../Incl/lib.h"
 
 BOOST_AUTO_TEST_SUITE(test_version)
 

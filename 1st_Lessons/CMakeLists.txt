@@ -12,9 +12,6 @@ add_executable(helloworld_cli main.cpp)
 add_library(helloworld Src/lib.cpp)
 add_executable(test_version Test/test_version.cpp)
 
-target_link_directories(helloworld_cli PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
-target_link_directories(helloworld PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
-target_link_directories(test_version PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
 
 set_target_properties(helloworld_cli helloworld test_version PROPERTIES
     CXX_STANDARD 14
@@ -24,9 +21,14 @@ target_include_directories(helloworld
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
 set_target_properties(test_version PROPERTIES
-    COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+    COMPILE_DEFINITIONS BOOST_TEST_STATIC_LINK
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
+
+target_link_directories(helloworld_cli PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
+target_link_directories(helloworld PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
+target_link_directories(test_version PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons
+        PRIVATE ${CMAKE_BINARY_DIR}/1st_Lessons/Incl)
 
 target_link_libraries(helloworld_cli PRIVATE
     helloworld
