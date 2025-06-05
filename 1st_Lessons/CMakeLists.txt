@@ -10,10 +10,8 @@ configure_file(version.h.in version.h)
 
 add_executable(helloworld_cli main.cpp)
 add_library(helloworld Src/lib.cpp)
-add_executable(test_version Src/test_version.cpp)
+add_executable(test_version Test/test_version.cpp)
 
-
-include_directories()
 target_link_directories(helloworld_cli PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
 target_link_directories(helloworld PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
 target_link_directories(test_version PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
@@ -60,7 +58,6 @@ else ()
         -Wall -Wextra -pedantic -Werror
     )
 endif()
-
 
 install(TARGETS helloworld_cli RUNTIME DESTINATION ../bin)
 
