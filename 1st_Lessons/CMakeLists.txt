@@ -13,9 +13,6 @@ add_library(helloworld Src/lib.cpp)
 add_executable(test_version Src/test_version.cpp)
 
 
-SET(TARGETS helloworld_cli helloworld test_version)
-#target_link_directories(${TARGETS} PUBLIC ${CMAKE_BINARY_DIR})
-message("Binary Dir "  ${CMAKE_BINARY_DIR})
 include_directories()
 target_link_directories(helloworld_cli PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
 target_link_directories(helloworld PUBLIC ${CMAKE_BINARY_DIR}/1st_Lessons)
