@@ -21,7 +21,7 @@ target_include_directories(helloworld
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
 set_target_properties(test_version PROPERTIES
-    COMPILE_DEFINITIONS BOOST_TEST_STATIC_LINK
+    #COMPILE_DEFINITIONS BOOST_TEST_STATIC_LINK
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
